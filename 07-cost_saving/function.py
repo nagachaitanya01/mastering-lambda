@@ -20,7 +20,7 @@ def lambda_handler(event, context):
 
         table.put_item(
             Item={
-                "pk": vid,
+                "vid": vid,
                 "Type": "EBS",
                 "Status": "ZOMBIE"
             }
@@ -33,3 +33,4 @@ def lambda_handler(event, context):
         )
 
     return {"zombies": len(volumes)}
+
